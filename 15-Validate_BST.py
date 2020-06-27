@@ -1,3 +1,4 @@
+# O(n) time | O(depth) space
 class Node:
     def __init__(self, value):
         self.value = value
