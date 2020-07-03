@@ -10,6 +10,7 @@ another node. The class should support setting the head and tail of the linked l
 removing given nodes and removing nodes with specic values, and searching for nodes with values. Only the searching method should return a value:
 specically, a boolean.
 
+
 Sample input:
 1 -> 2 -> 3 -> 4 -> 5
 Sample output (after setting 4 to head):
