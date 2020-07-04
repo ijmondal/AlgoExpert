@@ -12,7 +12,8 @@ def nth_fibonacci_2(n, memoize={1:0, 2:1}): #initialize dictionary
     if n in memoize:
         return memoize[n]
     else:
-        return nth_fibonacci_2(n-1, memoize) + nth_fibonacci_2(n-2,memoize)
+        memoize[n] = nth_fibonacci_2(n-1, memoize) + nth_fibonacci_2(n-2,memoize)
+        return memoize[n]
 
 #iterative O(n) time | O(1) space
 def nth_fibonacci_3(n):
@@ -25,4 +26,4 @@ def nth_fibonacci_3(n):
         counter += 1
     return lastTwo[1] if n > 1 else lastTwo[0]  #ternary operator
 
-print(nth_fibonacci_2(4))
+print(nth_fibonacci_2(6))
