@@ -2,7 +2,7 @@
 binary_search_tree insertion, deletion, searching
 '''
 class BST:
-    def __init__(self):
+    def __init__(self, value=0):
         self.value = value
         self.left = None
         self.right = None
@@ -25,7 +25,15 @@ class BST:
                 else:
                     currentNode = currentNode.right
         return self
-
+    
+    def recursive_insert(self, root,value):
+        if not root:
+            return BST(value)
+        if value < root.value:
+            root.left = self.recursive_insert(root.left, value)
+        else:
+            root.right = self.recursive_insert(root.right, value)
+        return root
             
      # Average: O(logn) time| O(1) space
     # Worst: O(m) time/ O(1) space
